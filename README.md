@@ -31,7 +31,14 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Decode a Morse Code Message**
+- **Ruby on Rails**
+- **Creating a data model**
+- **Functional website**
+- **Unit testing**
+- **Database**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,9 +105,14 @@ Example command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🔭 Future Features <a name="future-features"></a>
+## 🔭 Future Features <a name='future-features'></a>
 
-- [ ] **Decode Longer Messages**
+- [ ]  Validations and Model specs.
+- [ ]  Add more features to the app.
+- [ ]  Add more tests.
+- [ ]  Add more styling.
+- [ ] Add more features to the app.
+- [ ]  Add more tests.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,7 +128,7 @@ Feel free to check the [issues page](https://github.com/evansnyamekye/blog-app/i
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project...
+If you like this project, kindly drop a start ⭐️ for the [repository](https://github.com/evansnyamekye/blog-app.git);
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

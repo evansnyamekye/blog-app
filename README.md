@@ -123,7 +123,7 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I want to thank Sadaf and Ben for always availing themselves of details project discussions. I thank Microverse for the chance to become a software developer.
+I want to thank Sadaf and Ben for always availing themselves of detailed project discussions. I thank Microverse for the chance to become a software developer.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

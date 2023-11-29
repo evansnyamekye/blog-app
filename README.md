@@ -18,7 +18,7 @@
   - [📝 License ](#-license-)
 
 
-# 📖 Blog <a name="about-project"></a>
+# 📖 Blog-app <a name="about-project"></a>
 
 **The Blog app is designed to serve as a typical blog website. It aims to deliver a complete and operational web platform where users can explore a catalog of articles and engage with them through actions like leaving comments and expressing their appreciation by liking posts..
 
@@ -47,19 +47,12 @@
   </ul>
 </details>
 
-### Key Features <a name="key-features"></a>
-- **Decorate Design Pattern**
-
-
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
-
-In order to run this project you need to install tuby and rails:
-
+In order to run this project you need to install ruby and rails:
 
 Example command:
 
@@ -67,11 +60,9 @@ Example command:
  gem install ruby
 ```
 
-
 ### Setup
 
 Clone this repository to your desired folder:
-
 
 Example commands:
 
@@ -92,14 +83,13 @@ Example command:
 
 To run the project, execute the following command:
 
-
 Example command:
 
 ```sh
   rails s
 ```
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
 👤 **Evans Kofi Nyamekye**
 - GitHub: [evansnyamekye](https://github.com/evansnyamekye)
@@ -108,10 +98,9 @@ Example command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Connection with database**
+- [ ] **Decode Longer Messages**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -76,7 +76,7 @@ Install this project with:
 Example command:
 
 ```sh
-  cd blog
+  cd blog-app
 ```
 -
 ### Usage

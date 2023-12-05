@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-  def show
-    @post = Post.find_by_id (params[:id])
+  def show; 
+    @post = Post.find_by_id ([params[:id]])
   end
 end 

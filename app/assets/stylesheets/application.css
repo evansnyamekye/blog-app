@@ -2,79 +2,79 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #333;
-  }
-  
-  .container {
+}
+
+.container {
     width: 100%;
     text-align: center;
-  }
-  
-  .user_info {
+}
+
+.user_info {
     display: flex;
-  }
-  
-  .user {
+}
+
+.user {
     display: flex;
     border: 2px solid #333;
     padding: 20px;
     width: 20rem;
     margin: 10px;
-  }
-  
-  a {
+}
+
+a {
     text-decoration: none;
     color: #333;
     transition: background-color 0.3s ease;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     color: #2980b9;
-  }
-  
-  .user p {
+}
+
+.user p {
     margin-top: 20px;
     padding-left: 20px;
-  }
-  
-  .img {
+}
+
+.img {
     width: 100px;
     height: 100px;
     border: 2px solid #333;
     padding: 10px;
     margin: 10px;
-  }
-  
-  .user_bio {
+}
+
+.user_bio {
     border: 2px solid #333;
     width: 27.5rem;
     margin-left: 10px;
     text-align: start;
     padding: 10px;
-  }
-  
-  .user_bio p {
+}
+
+.user_bio p {
     padding-top: 10px;
-  }
-  
-  .post {
+}
+
+.post {
     border: 2px solid #333;
     margin: 10px;
     width: 27.5rem;
     padding: 10px;
     text-align: start;
-  }
-  
-  .count {
+}
+
+.count {
     text-align: end;
-  }
-  
-  .button {
+}
+
+.button {
     margin: 10px;
     padding: 15px;
     border: 2px solid #333;
@@ -82,13 +82,12 @@
     color: #fff;
     cursor: pointer;
     border-radius: 12px;
-  }
-  
-  .comments {
+}
+
+.comments {
     border: 2px solid #333;
     margin: 10px;
     width: 27.5rem;
     padding: 10px;
     text-align: start;
-  }
-  
+}

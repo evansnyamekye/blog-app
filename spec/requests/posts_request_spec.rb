@@ -45,5 +45,4 @@ RSpec.describe 'Posts', type: :request do
     get user_posts_path(user, post)
     expect(resopone.body).to include('Great Quotes')
    end
-  end
 end

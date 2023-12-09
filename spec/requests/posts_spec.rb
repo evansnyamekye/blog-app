@@ -35,14 +35,14 @@ describe 'GET #show' do
   it 'renders the show template' do
     user = FactoryBot.create(:user)
     post = FactoryBot.create(:post, author: user)
-    get user_posts_path(user, post)
+    get user_post_path(user, post)
     expect(response).to render_template(:show)
   end
 
   it 'includes correct placeholder text in the response body' do
     user = FactoryBot.create(:user)
     post = FactoryBot.create(:post, author: user)
-    get user_posts_path(user, post)
+    get user_post_path(user, post)
     expect(response.body).to include('Great Quotes')
   end
 end

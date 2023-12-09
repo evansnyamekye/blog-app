@@ -1,0 +1,2 @@
+class RenameUserIdToAuthorIdInComment < ApplicationRecord
+end

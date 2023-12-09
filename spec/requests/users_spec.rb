@@ -19,7 +19,7 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET #show' do
-    let(:user) { create(:user) }
+    let(:user) { FactoryBot.create(:user) }
 
     it 'returns a successful response' do
       get user_path(user)

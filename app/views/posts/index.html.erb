@@ -1,4 +1,4 @@
-<h1>Great Quote</h2>
+<h1>Great Quote</h1>
 <div class="container">
   <div class="user_info">
     <div class="img">
@@ -19,7 +19,7 @@
       <div class="comments">
         <% post.five_most_recent_comments.each do |comment| %>
           <div class="comment">
-            <p><%= link_to comment.author.name, user_path(comment.author) %>: <%= comment.text %></p>
+          <p><%= link_to(comment.author&.name, user_path(comment.author)) if comment.author&.id %>: <%= comment.text %></p>
           </div>
         <% end %>
       </div>

@@ -14,7 +14,11 @@
   <div class="comments">
     <% @post.comments.each do |comment| %>
       <div class="comment">
+<<<<<<< HEAD
         <p>👤<%= comment.author.name %>: <%= comment.text %></p>
+=======
+        <p><%= comment.author&.name %>: <%= comment.text %></p>
+>>>>>>> b83ab7b99dae96a8182f84e940355b3a1f23c079
       </div>
     <% end %>
   </div>

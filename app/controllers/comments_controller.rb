@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   def new
     store_referer
     @comment = Comment.new

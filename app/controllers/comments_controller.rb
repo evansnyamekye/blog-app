@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :set_user_and_post, only: %i[new create]
+#   before_action :set_user_and_post, only: %i[new create]
 
   def new
     store_referer
@@ -7,11 +7,12 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = @post.comments.build(comment_params.merge(user_id: current_user.id))
+    @comment = @current_user.comments.create(comment_params)
+    @comment.post_id = params[:post_id]
 
     if @comment.save
       flash[:success] = 'Comment saved successfully'
-      redirect_back_or_default(user_post_comments_path(@user, @post))
+      redirect_to user_post(@current_user, params[:post.id])
     else
       flash.now[:error] = 'Error: Comment could not be saved'
       render :new
@@ -24,10 +25,10 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:text)
   end
 
-  def set_user_and_post
-    @user = User.find(params[:user_id])
-    @post = @user.posts.find(params[:post_id])
-  end
+#   def set_user_and_post
+#     @user = User.find(params[:user_id])
+#     @post = @user.posts.find(params[:post_id])
+#   end
 
   def store_referer
     session[:referer] = request.referer

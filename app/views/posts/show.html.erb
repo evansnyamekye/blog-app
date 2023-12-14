@@ -14,16 +14,12 @@
   <div class="comments">
     <% @post.comments.each do |comment| %>
       <div class="comment">
-<<<<<<< HEAD
-        <p>👤<%= comment.author.name %>: <%= comment.text %></p>
-=======
         <p><%= comment.author&.name %>: <%= comment.text %></p>
->>>>>>> b83ab7b99dae96a8182f84e940355b3a1f23c079
       </div>
     <% end %>
   </div>
 
   <%= link_to 'Create New Comment 💬', new_user_post_comment_path(@user, @post), class: 'button' %>
 
-  <%= link_to 'Like 👍', new_user_post_like_path(@user, @post), class: 'button' %>
+  <%= link_to 'Like 👍', user_post_likes_path(@user, @post), class: 'button' %>
 </div>

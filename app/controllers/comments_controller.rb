@@ -8,7 +8,6 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @post
     @comment = @post.comments.build(comment_params.merge(author_id: current_user.id))
 
     if @comment.save

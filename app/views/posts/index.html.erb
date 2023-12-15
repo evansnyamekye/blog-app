@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <% @posts.limit(2).each do |post| %>
+  <% @posts.each do |post| %>
     <div class="post">
       <h4>Post📝</h4>
       <p><%= post.text %></p>

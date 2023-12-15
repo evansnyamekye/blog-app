@@ -20,6 +20,11 @@
   </div>
 
   <%= link_to 'Create New Comment 💬', new_user_post_comment_path(@user, @post), class: 'button' %>
-
-  <%= link_to 'Like 👍', user_post_likes_path(@user, @post), class: 'button' %>
+  <h3 style="color: #336699; margin: 12px 50px">Create a new comment💬</h3>
+  <%= form_with url: user_post_likes_path(@user, @post), method: :post do |f| %>
+  
+    <div>
+      <%= f.submit 'Like 👍', class: 'button'%>
+    </div>
+  <% end %>
 </div>

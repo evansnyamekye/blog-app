@@ -5,16 +5,16 @@
       <%= image_tag @user.photo, alt: "User Photo", class: "user-photo" %>
     </div>
     <div class="user">
-      <h2><%= link_to @user.name, user_path(@user) %></h2>
-      <p><strong>Number of Posts:</strong> <%= @user.posts.count %></p>
+      👤<h2><%= link_to @user.name, user_path(@user) %></h2>
+      <p><strong>Number of Posts:📝</strong> <%= @user.posts.count %></p>
     </div>
   </div>
 
-  <% @posts.limit(2).each do |post| %>
+  <% @posts.each do |post| %>
     <div class="post">
-      <h4>Post</h4>
+      <h4>Post📝</h4>
       <p><%= post.text %></p>
-      <p class="count">Comments: <%= post.comments.count %> | Likes: <%= post.likes.count %></p>
+      <p class="count">Comments:💬<%= post.comments.count %> | Likes:👍<%= post.likes.count %></p>
     </div>
       <div class="comments">
         <% post.five_most_recent_comments.each do |comment| %>
@@ -26,4 +26,5 @@
   <% end %>
 
   <%= link_to 'Pagination', user_posts_path(@user), class: 'button' %>
+  <%= link_to 'Create New Post 📝', new_user_post_path(@user), class: 'button' %> 
 </div>

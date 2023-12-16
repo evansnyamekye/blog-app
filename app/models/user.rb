@@ -13,10 +13,10 @@ class User < ApplicationRecord
     posts.order(created_at: :desc).limit(3)
   end
 
-  post = post.order(created_at: :desc).limit(3)
-
-  post.each do |post|
-    puts.each do |comment|
-      puts comment.text
+  users = User.includes(:posts).limit(10)
+  users.each do |user|
+    user.posts.each do |post|
+      puts post.title
     end
+  end
 end

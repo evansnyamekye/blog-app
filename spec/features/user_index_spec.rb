@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Users index', type: :feature do
-  let(:users) { FactoryBot.create_list(:user, 5) }
+  let(:users) { create_list(:user, 5) }
 
   before do
     users

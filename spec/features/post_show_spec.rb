@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'Post show page', type: :feature do
-  let(:user) { FactoryBot.create(:user) }
-  let(:post) { FactoryBot.create(:post, author: user) }
-  let(:comments) { FactoryBot.create_list(:comment, 5, author: user, post:) }
+  let(:user) { create(:user) }
+  let(:post) { create(:post, author: user) }
+  let(:comments) { create_list(:comment, 5, author: user, post:) }
 
   before do
     comments

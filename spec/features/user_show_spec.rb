@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'User show page', type: :feature do
-  let(:user) { FactoryBot.create(:user) }
-  let(:posts) { FactoryBot.create_list(:post, 5, author: user) }
+  let(:user) { create(:user) }
+  let(:posts) { (:post, 5, author: user) }
 
   before do
     posts

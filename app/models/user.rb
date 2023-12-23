@@ -12,4 +12,11 @@ class User < ApplicationRecord
   def three_recent_posts
     posts.order(created_at: :desc).limit(3)
   end
+
+  users = User.includes(:posts).limit(10)
+  users.each do |user|
+    user.posts.each do |post|
+      puts post.title
+    end
+  end
 end

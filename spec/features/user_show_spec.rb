@@ -1,9 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'User show page', type: :feature do
+<<<<<<< HEAD
   let(:user) { create(:user) }
   let(:posts) { (:post, 5, author: user) }
 
+=======
+  let(:user) { FactoryBot.create(:user) }
+  let(:posts) { FactoryBot.create_list(:post, 5, author: user) }
+>>>>>>> d2a2edb1480b99afb80430fc5e1c260f1a039b46
   before do
     posts
     visit user_path(user)
@@ -31,7 +36,11 @@ RSpec.describe 'User show page', type: :feature do
     end
 
     it 'displays view all posts button' do
+<<<<<<< HEAD
       expect(page).to have_link('See all posts 📝')
+=======
+      expect(page).to have_link('See all posts :memo:')
+>>>>>>> d2a2edb1480b99afb80430fc5e1c260f1a039b46
     end
 
     it 'redirects to post show page' do
@@ -40,7 +49,11 @@ RSpec.describe 'User show page', type: :feature do
     end
 
     it 'redirects to user posts index page' do
+<<<<<<< HEAD
       click_link('See all posts 📝')
+=======
+      click_link('See all posts :memo:')
+>>>>>>> d2a2edb1480b99afb80430fc5e1c260f1a039b46
       expect(page).to have_current_path(user_posts_path(user))
     end
 

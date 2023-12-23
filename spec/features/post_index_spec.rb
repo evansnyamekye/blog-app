@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe 'PostIndex', type: :feature do
-  let(:user) { create(:user) }
-  let(:post) { create(:post, author: user) }
-  let(:comments) { create_list(:comment, 3, post:, text: 'old', author: user, created_at: 4.days.ago) }
+  let(:user) { FactoryBot.create(:user) }
+  let(:post) { FactoryBot.create(:post, author: user) }
+  let(:comments) { FactoryBot.create_list(:comment, 3, post:, text: 'old', author: user, created_at: 4.days.ago) }
 
-  let(:recent_comments) { create_list(:comment, 5, post:, text: 'new', author: user) }
+  let(:recent_comments) { FactoryBot.create_list(:comment, 5, post:, text: 'new', author: user) }
 
   before do
     post
@@ -42,7 +42,11 @@ RSpec.describe 'PostIndex', type: :feature do
     end
 
     it 'Shows pagination section if there are more posts than fit on the view' do
+<<<<<<< HEAD
       create_list(:post, 10, author: user)
+=======
+      FactoryBot.create_list(:post, 10, author: user)
+>>>>>>> d2a2edb1480b99afb80430fc5e1c260f1a039b46
       visit user_posts_path(user)
       expect(page).to have_content('Pagination')
     end

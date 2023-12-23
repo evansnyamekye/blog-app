@@ -1,45 +1,44 @@
 require 'rails_helper'
 
-RSpec.describe 'Post show page', type: :feature do
-  let(:user) { create(:user) }
+describe 'Post Show Page', type: :feature do
   let(:post) { create(:post, author: user) }
-  let(:comments) { create_list(:comment, 5, author: user, post:) }
-
+  let(:user) { create(:user) }
+  let(:comments) { create_list(:comment, 3, author: user, post:) }
   before do
     comments
     visit user_post_path(user, post)
   end
 
-  describe 'Post show page' do
-    it 'displays post title' do
+  describe 'Post section page' do
+    it "displays the post's title" do
       expect(page).to have_content(post.title)
     end
 
-    it 'displays post author name' do
+    it 'displays the author of the post' do
       expect(page).to have_content(post.author.name)
     end
 
-    it 'displays post text' do
-      expect(page).to have_content(post.text)
+    it 'displays the number of comments' do
+      expect(page).to have_content(post.comments.count)
     end
 
-    it 'displays post likes count' do
-      expect(page).to have_content(post.likes_counter)
+    it 'displays the number of likes' do
+      expect(page).to have_content(post.likes.count)
     end
 
-    it 'displays post comments count' do
-      expect(page).to have_content(post.comments_counter)
+    it 'displays the post body' do
+      expect(page).to have_content(post.body)
     end
 
-    it 'displays all comments' do
-      comments.each do |comment|
-        expect(page).to have_content(comment.text)
+    it 'displays the username of each commentor' do
+      post.comments.each do |comment|
+        expect(page).to have_content(comment.user.username)
       end
     end
 
-    it 'displays all comments authors' do
-      comments.each do |comment|
-        expect(page).to have_content(comment.author.name)
+    it 'displays the comment each commentor left' do
+      post.comments.each do |comment|
+        expect(page).to have_content(comment.body)
       end
     end
   end
